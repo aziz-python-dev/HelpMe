@@ -14,10 +14,10 @@ def help_me():
             break
         
         analyse_sentence(sentence)
-        sentence = input(f"\n{Fore.MAGENTA}Вам помогла цитата? 🙂 {Style.RESET_ALL}(да/нет) ")
+        sentence = input(f"\n{Fore.MAGENTA}Вам помогла цитата? 🙂 {Style.RESET_ALL}(да/нет) ").lower()
         while ('нет' in sentence) or ('не' in sentence):
             analyse_sentence(sentence)
-            sentence = input(f"\n{Fore.MAGENTA}А теперь помогла 😊 {Style.RESET_ALL}(да/нет) ? ")
+            sentence = input(f"\n{Fore.MAGENTA}А теперь помогла 😊 {Style.RESET_ALL}(да/нет) ? ").lower()
         else:
             print(f"{Fore.MAGENTA}{random_msgs2()}{Style.RESET_ALL}")
         
